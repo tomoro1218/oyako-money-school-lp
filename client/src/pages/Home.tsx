@@ -269,10 +269,6 @@ export default function Home() {
                   src="/manus-storage/oyako-money-hero_a2f8b069.png"
                   alt="親子でパン屋さんごっこを楽しむ様子の手描きイラスト"
                 />
-                <span className="hero__visual-sticker">
-                  <Store size={22} aria-hidden="true" />
-                  つくって・うって・ありがとう！
-                </span>
               </div>
             </div>
           </div>
@@ -571,7 +567,7 @@ export default function Home() {
             </p>
             <p>AXA-C-260622-1</p>
           </div>
-          <p className="footer-copyright">© 親子で楽しむ体験型マネースクール</p>
+          <p className="footer-copyright">© マネー・きらら☆編集部 All Rights Reserved.</p>
         </div>
       </footer>
 

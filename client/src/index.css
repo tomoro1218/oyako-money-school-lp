@@ -622,28 +622,12 @@ a[href] {
 .hero__image-wrap img {
   width: 100%;
   aspect-ratio: 4 / 3;
+  display: block;
   object-fit: cover;
-  object-position: 72% center;
+  object-position: right center;
   border-radius: 40% 60% 52% 48% / 47% 42% 58% 53%;
-}
-
-.hero__visual-sticker {
-  position: absolute;
-  right: 2%;
-  bottom: 1%;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  max-width: 250px;
-  padding: 11px 15px;
-  color: #fff;
-  background: var(--blue);
-  border: 3px solid #fff;
-  border-radius: 52% 48% 42% 58% / 48% 55% 45% 52%;
-  box-shadow: 3px 5px 0 #245a84;
-  font-size: 0.8rem;
-  font-weight: 900;
-  transform: rotate(-3deg);
+  transform: scale(1.18);
+  transform-origin: 94% 54%;
 }
 
 .scroll-cue {
@@ -1897,7 +1881,6 @@ a[href] {
   .hero__title-sub { margin-left: 48%; font-size: clamp(2.8rem, 11vw, 4.8rem); }
   .hero__visual { margin: 22px auto 0; max-width: 680px; }
   .hero__actions { gap: 24px; }
-  .hero__visual-sticker { right: 2%; }
   .scroll-cue { display: none; }
   .venue-card { grid-template-columns: 1fr; }
   .venue-card:nth-child(2),
@@ -1956,7 +1939,6 @@ a[href] {
   .hero__actions .cta-button { width: 100%; min-width: 0; }
   .text-link { align-self: center; }
   .hero__image-wrap { padding: 7px; box-shadow: 9px 11px 0 rgba(215, 53, 114, 0.15); }
-  .hero__visual-sticker { max-width: 200px; font-size: 0.68rem; }
   .overview-grid { grid-template-columns: 1fr; gap: 19px; }
   .overview-card { min-height: 0; padding: 24px 20px; transform: none !important; }
   .overview-card__icon { width: 51px; height: 51px; }
