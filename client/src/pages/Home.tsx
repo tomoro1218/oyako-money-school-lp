@@ -99,7 +99,7 @@ const venues = [
     area: "岡崎会場",
     name: "岡崎市民会館",
     address: "岡崎市六供町出崎15-1",
-    dates: ["8/30(土)"],
+    dates: ["8/30(日)"],
     mapUrl:
       "https://www.google.com/maps?q=%E5%B2%A1%E5%B4%8E%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8&output=embed",
     directionsUrl:
@@ -543,7 +543,7 @@ export default function Home() {
             </div>
             <div className="footer-contact">
               <p className="footer-label"><Phone size={17} />お問い合わせ（平日 10:00〜16:00）</p>
-              <p className="footer-contact__name">マネーキラキラ編集部</p>
+              <p className="footer-contact__name">有限会社アド・フューチャー きらきら☆編集部</p>
               <p><a href="tel:0523047480"><strong>052-304-7480</strong></a>（担当：辻村）</p>
             </div>
           </div>
@@ -551,7 +551,7 @@ export default function Home() {
           <div className="footer-organizers">
             <div>
               <p className="footer-label"><Building2 size={17} />主催</p>
-              <p>有限会社マネー・きらら☆編集部</p>
+              <p>有限会社アド・フューチャー きらきら☆編集部</p>
             </div>
             <div>
               <p className="footer-label"><Building2 size={17} />共催</p>
@@ -563,11 +563,11 @@ export default function Home() {
 
           <div className="footer-disclaimer">
             <p>
-              ※このイベントはアクサ生命の依頼によりアド・フューチャーが集客および開催いたします。マネーセミナーはアクサ生命の依頼によりアド・フューチャーが集客し、アクサ生命が開催いたします。ただし、参加者の受付登録・参加者情報管理についてはアド・フューチャーが責任を負って行います。
+              ※このイベントはアクサ生命の依頼により有限会社アド・フューチャー きらきら☆編集部が集客および開催いたします。マネーセミナーはアクサ生命の依頼により有限会社アド・フューチャー きらきら☆編集部が集客し、アクサ生命が開催いたします。ただし、参加者の受付登録・参加者情報管理については有限会社アド・フューチャー きらきら☆編集部が責任を負って行います。
             </p>
             <p>AXA-C-260622-1</p>
           </div>
-          <p className="footer-copyright">© マネー・きらら☆編集部 All Rights Reserved.</p>
+          <p className="footer-copyright">© 有限会社アド・フューチャー きらきら☆編集部 All Rights Reserved.</p>
         </div>
       </footer>
 
