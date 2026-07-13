@@ -964,17 +964,28 @@ a[href] {
   text-align: left;
 }
 
+.learning-intro__bubble::before,
 .learning-intro__bubble::after {
   content: "";
   position: absolute;
   left: 52%;
-  bottom: -24px;
-  width: 34px;
-  height: 28px;
-  background: #e9f5fb;
-  border-right: 3px solid var(--blue);
-  border-bottom: 3px solid var(--blue);
-  transform: skewY(30deg) rotate(30deg);
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+}
+
+.learning-intro__bubble::before {
+  bottom: -27px;
+  border-left: 19px solid transparent;
+  border-right: 19px solid transparent;
+  border-top: 27px solid var(--blue);
+}
+
+.learning-intro__bubble::after {
+  bottom: -20px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 22px solid #e9f5fb;
 }
 
 .learning-intro__bubble > svg {
