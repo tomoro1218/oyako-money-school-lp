@@ -266,7 +266,7 @@ export default function Home() {
             <div className="hero__visual" data-reveal>
               <div className="hero__image-wrap">
                 <img
-                  src="/manus-storage/oyako-money-hero_a2f8b069.png"
+                  src="/manus-storage/oyako-money-hero_dff3f37c.png"
                   alt="親子でパン屋さんごっこを楽しむ様子の手描きイラスト"
                 />
               </div>
@@ -405,7 +405,7 @@ export default function Home() {
             <div className="story-grid">
               <div className="story-image story-image--experience" data-reveal>
                 <img
-                  src="/manus-storage/oyako-money-experience-v2_220d3861.png"
+                  src="/manus-storage/oyako-money-experience-v2_41f70c45.png"
                   alt="子どもたちがお店屋さんとお客さんになって遊ぶ手描きイラスト"
                 />
                 <span className="image-tape" aria-hidden="true" />
@@ -427,7 +427,7 @@ export default function Home() {
             <div className="story-grid story-grid--reverse">
               <div className="story-image story-image--cycle" data-reveal>
                 <img
-                  src="/manus-storage/oyako-money-cycle-v2_5cbfe728.png"
+                  src="/manus-storage/oyako-money-cycle-v2_afae8f65.png"
                   alt="作る人、売る人、買う人、ありがとうのつながりを描いたイラスト"
                 />
                 <span className="image-tape image-tape--blue" aria-hidden="true" />
@@ -462,7 +462,7 @@ export default function Home() {
               </div>
               <div className="parent-seminar__image">
                 <img
-                  src="/manus-storage/oyako-money-seminar-v2_e5749dba.png"
+                  src="/manus-storage/oyako-money-seminar-v2_03ea309b.png"
                   alt="保護者が別室でマネーセミナーを受ける様子の手描きイラスト"
                 />
               </div>
@@ -488,7 +488,7 @@ export default function Home() {
                 <span className="teacher-card__sunburst" aria-hidden="true" />
                 <div className="teacher-card__portrait-inner">
                   <img
-                    src="/manus-storage/ogawa-naoki_12e6565c.png"
+                    src="/manus-storage/ogawa-naoki_f76d252c.png"
                     alt="講師 小川直輝氏"
                   />
                 </div>
@@ -517,7 +517,7 @@ export default function Home() {
           <div className="container final-cta__inner" data-reveal>
             <div className="final-cta__mark">
               <img
-                src="/manus-storage/oyako-money-logo-v2_a113df99.png"
+                  src="/manus-storage/oyako-money-logo-v2_bac86f9b.png"
                 alt=""
                 aria-hidden="true"
               />
