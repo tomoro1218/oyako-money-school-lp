@@ -15,7 +15,6 @@ import {
   Coins,
   ExternalLink,
   Flower2,
-  GraduationCap,
   HandCoins,
   HeartHandshake,
   MapPin,
@@ -489,11 +488,13 @@ export default function Home() {
           <div className="container">
             <SectionHeading eyebrow="子どもにも大人にも、わかりやすく" title="講師紹介" />
             <article className="teacher-card" data-reveal>
-              <div className="teacher-card__portrait" aria-label="講師プロフィールを表すイラスト">
+              <div className="teacher-card__portrait" aria-label="小川直輝氏のプロフィール写真">
                 <span className="teacher-card__sunburst" aria-hidden="true" />
                 <div className="teacher-card__portrait-inner">
-                  <GraduationCap aria-hidden="true" />
-                  <span>TEACHER</span>
+                  <img
+                    src="/manus-storage/ogawa-naoki_12e6565c.png"
+                    alt="講師 小川直輝氏"
+                  />
                 </div>
                 <span className="teacher-card__portrait-note">元高校教諭</span>
               </div>
@@ -546,7 +547,8 @@ export default function Home() {
             </div>
             <div className="footer-contact">
               <p className="footer-label"><Phone size={17} />お問い合わせ（平日 10:00〜16:00）</p>
-              <p><strong>052-304-7480</strong>（担当：辻村）</p>
+              <p className="footer-contact__name">マネーキラキラ編集部</p>
+              <p><a href="tel:0523047480"><strong>052-304-7480</strong></a>（担当：辻村）</p>
             </div>
           </div>
 
