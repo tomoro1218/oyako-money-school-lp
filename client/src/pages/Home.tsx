@@ -230,7 +230,10 @@ export default function Home() {
             <div className="hero__copy" data-reveal>
               <div className="hero__badges">
                 <span className="free-stamp">参加<br />無料</span>
-                <span className="hero__kicker">親子で楽しむ<br />体験型マネースクール</span>
+                <span className="hero__kicker">
+                  <span className="hero__presenter">キラキラPresents</span>
+                  <span>親子で楽しむ<br />体験型マネースクール</span>
+                </span>
               </div>
               <h1 className="hero__title" aria-label="おみせやさんごっこ">
                 <span className="hero__title-main">
@@ -495,7 +498,7 @@ export default function Home() {
                 <span className="teacher-card__portrait-note">元高校教諭</span>
               </div>
               <div className="teacher-card__content">
-                <p className="teacher-card__role">キッズマネースクール 清流のまち校 代表</p>
+                <p className="teacher-card__role">キッズマネースクール 青竜の街校 代表</p>
                 <h3>小川 直輝 <small>氏</small></h3>
                 <p className="teacher-card__company">アクサ生命保険株式会社 所属</p>
                 <div className="teacher-card__bio">

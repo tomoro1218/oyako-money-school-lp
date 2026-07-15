@@ -517,12 +517,39 @@ a[href] {
 }
 
 .hero__kicker {
+  display: grid;
+  justify-items: start;
+  gap: 7px;
   color: #9f315a;
   font-family: "Klee One", cursive;
   font-size: clamp(1rem, 1.8vw, 1.4rem);
   font-weight: 600;
   line-height: 1.6;
   letter-spacing: 0.08em;
+}
+
+.hero__presenter {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 11px 5px;
+  color: #a91e52;
+  background: #fff3a9;
+  border: 2px dashed var(--pink);
+  border-radius: 9px 13px 8px 12px;
+  box-shadow: 3px 3px 0 rgba(229, 162, 36, 0.45);
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 0.72em;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  transform: rotate(-2deg);
+}
+
+.hero__presenter::before {
+  content: "★";
+  margin-right: 6px;
+  color: var(--orange);
+  font-size: 0.9em;
 }
 
 .hero__title {
@@ -1347,10 +1374,21 @@ a[href] {
 }
 
 .teacher-card__role {
+  width: fit-content;
+  max-width: 100%;
   margin: 0;
-  color: var(--pink);
-  font-family: "Klee One", cursive;
-  font-weight: 600;
+  padding: 8px 15px 9px;
+  color: #9f315a;
+  background: #fff0a8;
+  border-left: 6px solid var(--pink);
+  border-radius: 5px 13px 8px 4px;
+  box-shadow: 4px 5px 0 rgba(229, 162, 36, 0.28);
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.62rem);
+  font-weight: 900;
+  line-height: 1.45;
+  letter-spacing: 0.025em;
+  transform: rotate(-1deg);
 }
 
 .teacher-card h3 {
@@ -1942,6 +1980,7 @@ a[href] {
   .hero__badges { gap: 13px; }
   .free-stamp { width: 72px; height: 72px; font-size: 1rem; }
   .hero__kicker { font-size: 0.9rem; }
+  .hero__presenter { padding: 4px 8px; font-size: 0.72rem; }
   .hero__title-main > span { font-size: clamp(2.72rem, 16.8vw, 5.7rem); }
   .hero__title-sub { margin-top: 10px; font-size: 2.6rem; }
   .hero__lead { margin: 22px 0 27px; font-size: 0.98rem; }
@@ -1978,6 +2017,7 @@ a[href] {
   .teacher-card { padding: 32px 22px 40px; border-radius: 38px 20px 43px 26px; }
   .teacher-card__portrait-inner { width: 190px; height: 210px; }
   .teacher-card__portrait-inner svg { width: 82px; height: 82px; }
+  .teacher-card__role { padding: 8px 11px; font-size: 1.08rem; line-height: 1.5; }
   .teacher-card h3 { font-size: 2.45rem; }
   .final-cta__inner { grid-template-columns: 1fr; text-align: center; }
   .final-cta__mark { width: 96px; height: 96px; margin-inline: auto; }
