@@ -531,25 +531,29 @@ a[href] {
 .hero__presenter {
   display: inline-flex;
   align-items: center;
-  padding: 4px 11px 5px;
-  color: #a91e52;
-  background: #fff3a9;
+  gap: 7px;
+  padding: 5px 8px;
+  background: #fff;
   border: 2px dashed var(--pink);
   border-radius: 9px 13px 8px 12px;
   box-shadow: 3px 3px 0 rgba(229, 162, 36, 0.45);
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-size: 0.72em;
-  font-weight: 900;
-  line-height: 1.2;
-  letter-spacing: 0.04em;
   transform: rotate(-2deg);
 }
 
-.hero__presenter::before {
-  content: "★";
-  margin-right: 6px;
-  color: var(--orange);
-  font-size: 0.9em;
+.hero__presenter-logo {
+  display: block;
+  width: clamp(118px, 10vw, 150px);
+  height: auto;
+}
+
+.hero__presenter-text {
+  color: #a91e52;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: clamp(0.72rem, 0.9vw, 0.88rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  transform: translateY(2px) rotate(2deg);
 }
 
 .hero__title {
@@ -1374,6 +1378,8 @@ a[href] {
 }
 
 .teacher-card__role {
+  display: grid;
+  gap: 1px;
   width: fit-content;
   max-width: 100%;
   margin: 0;
@@ -1389,6 +1395,10 @@ a[href] {
   line-height: 1.45;
   letter-spacing: 0.025em;
   transform: rotate(-1deg);
+}
+
+.teacher-card__role span {
+  display: block;
 }
 
 .teacher-card h3 {
@@ -1980,7 +1990,9 @@ a[href] {
   .hero__badges { gap: 13px; }
   .free-stamp { width: 72px; height: 72px; font-size: 1rem; }
   .hero__kicker { font-size: 0.9rem; }
-  .hero__presenter { padding: 4px 8px; font-size: 0.72rem; }
+  .hero__presenter { gap: 5px; padding: 4px 7px; }
+  .hero__presenter-logo { width: 110px; }
+  .hero__presenter-text { font-size: 0.68rem; }
   .hero__title-main > span { font-size: clamp(2.72rem, 16.8vw, 5.7rem); }
   .hero__title-sub { margin-top: 10px; font-size: 2.6rem; }
   .hero__lead { margin: 22px 0 27px; font-size: 0.98rem; }

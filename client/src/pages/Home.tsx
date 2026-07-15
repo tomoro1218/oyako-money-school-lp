@@ -231,7 +231,14 @@ export default function Home() {
               <div className="hero__badges">
                 <span className="free-stamp">参加<br />無料</span>
                 <span className="hero__kicker">
-                  <span className="hero__presenter">キラキラPresents</span>
+                  <span className="hero__presenter">
+                    <img
+                      className="hero__presenter-logo"
+                      src="/manus-storage/kirakira-logo_0f2ace12.png"
+                      alt="きらきら"
+                    />
+                    <span className="hero__presenter-text">presents</span>
+                  </span>
                   <span>親子で楽しむ<br />体験型マネースクール</span>
                 </span>
               </div>
@@ -491,14 +498,17 @@ export default function Home() {
                 <span className="teacher-card__sunburst" aria-hidden="true" />
                 <div className="teacher-card__portrait-inner">
                   <img
-                    src="/manus-storage/ogawa-naoki_f76d252c.png"
+                    src="/manus-storage/ogawa-naoki-updated_896c6984.png"
                     alt="講師 小川直輝氏"
                   />
                 </div>
                 <span className="teacher-card__portrait-note">元高校教諭</span>
               </div>
               <div className="teacher-card__content">
-                <p className="teacher-card__role">キッズマネースクール 青竜の街校 代表</p>
+                <p className="teacher-card__role">
+                  <span>キッズマネースクール</span>
+                  <span>清流のまち校</span>
+                </p>
                 <h3>小川 直輝 <small>氏</small></h3>
                 <p className="teacher-card__company">アクサ生命保険株式会社 所属</p>
                 <div className="teacher-card__bio">
