@@ -43,8 +43,8 @@ const overviewItems = [
   {
     icon: Clock3,
     label: "開催時間",
-    value: "日程ごとに異なります",
-    note: "詳しい時間は各会場の日程欄をご確認ください",
+    value: "9:30〜12:00／13:30〜16:00",
+    note: "10/3・10/10は午前、10/31は午後開催",
     tone: "pink",
   },
   {
