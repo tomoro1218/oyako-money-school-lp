@@ -43,8 +43,8 @@ const overviewItems = [
   {
     icon: Clock3,
     label: "開催時間",
-    value: "9:30–11:30",
-    note: "たっぷり2時間の体験プログラム",
+    value: "日程ごとに異なります",
+    note: "詳しい時間は各会場の日程欄をご確認ください",
     tone: "pink",
   },
   {
@@ -72,40 +72,40 @@ const overviewItems = [
 
 const venues = [
   {
-    area: "刈谷会場",
-    name: "刈谷市産業振興センター",
-    address: "刈谷市相生町1丁目1-6",
-    dates: ["7/25(土)", "8/8(土)", "8/23(日)"],
-    mapUrl:
-      "https://www.google.com/maps?q=%E5%88%88%E8%B0%B7%E5%B8%82%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&output=embed",
-    directionsUrl:
-      "https://www.google.com/maps/search/?api=1&query=%E5%88%88%E8%B0%B7%E5%B8%82%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC",
-    accent: "#d73572",
-    stamp: "KARIYA",
-  },
-  {
     area: "岡崎会場",
     name: "竜美丘会館",
     address: "岡崎市東明大寺町5-1",
-    dates: ["8/1(土)", "8/2(日)"],
+    dates: ["10/3(土) 9:30〜12:00"],
     mapUrl:
       "https://www.google.com/maps?q=%E7%AB%9C%E7%BE%8E%E4%B8%98%E4%BC%9A%E9%A4%A8&output=embed",
     directionsUrl:
       "https://www.google.com/maps/search/?api=1&query=%E7%AB%9C%E7%BE%8E%E4%B8%98%E4%BC%9A%E9%A4%A8",
-    accent: "#e9822c",
-    stamp: "OKAZAKI 01",
+    accent: "#d73572",
+    stamp: "OKAZAKI",
   },
   {
-    area: "岡崎会場",
-    name: "岡崎市民会館",
-    address: "岡崎市六供町出崎15-1",
-    dates: ["8/30(日)"],
+    area: "刈谷会場",
+    name: "刈谷産業振興センター",
+    address: "刈谷市相生町1丁目1-6",
+    dates: ["10/10(土) 9:30〜12:00"],
     mapUrl:
-      "https://www.google.com/maps?q=%E5%B2%A1%E5%B4%8E%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8&output=embed",
+      "https://www.google.com/maps?q=%E5%88%88%E8%B0%B7%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&output=embed",
     directionsUrl:
-      "https://www.google.com/maps/search/?api=1&query=%E5%B2%A1%E5%B4%8E%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8",
+      "https://www.google.com/maps/search/?api=1&query=%E5%88%88%E8%B0%B7%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC",
+    accent: "#e9822c",
+    stamp: "KARIYA",
+  },
+  {
+    area: "安城会場",
+    name: "アンフォーレ",
+    address: "安城市御幸本町504番地1",
+    dates: ["10/31(土) 13:30〜16:00"],
+    mapUrl:
+      "https://www.google.com/maps?q=%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AC&output=embed",
+    directionsUrl:
+      "https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AC",
     accent: "#2e73a9",
-    stamp: "OKAZAKI 02",
+    stamp: "ANJO",
   },
 ];
 
@@ -234,10 +234,9 @@ export default function Home() {
                   <span className="hero__presenter">
                     <img
                       className="hero__presenter-logo"
-                      src="/manus-storage/kirakira-logo_0f2ace12.png"
-                      alt="きらきら"
+                      src="/manus-storage/oyako-money-logo-v2_bac86f9b.png"
+                      alt="おみせやさんごっこ"
                     />
-                    <span className="hero__presenter-text">presents</span>
                   </span>
                   <span>親子で楽しむ<br />体験型マネースクール</span>
                 </span>
@@ -510,7 +509,6 @@ export default function Home() {
                   <span>清流のまち校</span>
                 </p>
                 <h3>小川 直輝 <small>氏</small></h3>
-                <p className="teacher-card__company">アクサ生命保険株式会社 所属</p>
                 <div className="teacher-card__bio">
                   <p>
                     元高校教諭としての経験を活かし、子どもたちにも保護者さまにも、お金の話をやさしく、身近に届けています。親子の会話が自然に生まれる、参加型の講座を大切にしています。
@@ -555,32 +553,19 @@ export default function Home() {
               </div>
             </div>
             <div className="footer-contact">
-              <p className="footer-label"><Phone size={17} />お問い合わせ（平日 10:00〜16:00）</p>
-              <p className="footer-contact__name">有限会社アド・フューチャー きらきら☆編集部</p>
-              <p><a href="tel:0523047480"><strong>052-304-7480</strong></a>（担当：辻村）</p>
+              <p className="footer-label"><Phone size={17} />お問い合わせ</p>
+              <p>参加に関するお問い合わせは、申込フォームよりご確認ください。</p>
             </div>
           </div>
 
           <div className="footer-organizers">
             <div>
               <p className="footer-label"><Building2 size={17} />主催</p>
-              <p>有限会社アド・フューチャー きらきら☆編集部</p>
-            </div>
-            <div>
-              <p className="footer-label"><Building2 size={17} />共催</p>
-              <p>アクサ生命保険株式会社 名古屋FA支社</p>
-              <p>愛知県名古屋市中区錦1-11-11 名古屋インターシティ9F</p>
-              <p>Tel. 052-232-3402</p>
+              <p>キッズマネースクール清流のまち校</p>
             </div>
           </div>
 
-          <div className="footer-disclaimer">
-            <p>
-              ※このイベントはアクサ生命の依頼により有限会社アド・フューチャー きらきら☆編集部が集客および開催いたします。マネーセミナーはアクサ生命の依頼により有限会社アド・フューチャー きらきら☆編集部が集客し、アクサ生命が開催いたします。ただし、参加者の受付登録・参加者情報管理については有限会社アド・フューチャー きらきら☆編集部が責任を負って行います。
-            </p>
-            <p>AXA-C-260622-1</p>
-          </div>
-          <p className="footer-copyright">© 有限会社アド・フューチャー きらきら☆編集部 All Rights Reserved.</p>
+          <p className="footer-copyright">© キッズマネースクール清流のまち校</p>
         </div>
       </footer>
 
