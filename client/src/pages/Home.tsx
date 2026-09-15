@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 
 const FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSekHAborWr6MwhxFu88mPBdMfCeDe2OGMrb8SMjVgXDF17NYA/viewform?usp=send_form";
+  "https://docs.google.com/forms/d/e/1FAIpQLSc005BG2ueuMSLm3ApIpcAjm7YOsUmDLcprwnMf9VL8nrcyXA/viewform?usp=dialog";
 
 const heroTitle = [
   { char: "お", color: "#d73572", rotate: "-4deg" },
@@ -78,8 +78,11 @@ const venues = [
     dates: ["10/3(土) 9:30〜12:00"],
     mapUrl:
       "https://www.google.com/maps?q=%E7%AB%9C%E7%BE%8E%E4%B8%98%E4%BC%9A%E9%A4%A8&output=embed",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.4311525415847!2d137.1746852757178!3d34.94580087002239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004bce3b6e382c9%3A0x798d53430ef67769!2z5oSb55-l55yM5bKh5bSO5biCIOernOe-juS4mOS8mumkqOmAmuOCig!5e0!3m2!1sja!2sjp!4v1789262069755!5m2!1sja!2sjp",
     directionsUrl:
       "https://www.google.com/maps/search/?api=1&query=%E7%AB%9C%E7%BE%8E%E4%B8%98%E4%BC%9A%E9%A4%A8",
+    center: { lat: 34.9542, lng: 137.1804 },
     accent: "#d73572",
     stamp: "OKAZAKI",
   },
@@ -90,8 +93,11 @@ const venues = [
     dates: ["10/10(土) 9:30〜12:00"],
     mapUrl:
       "https://www.google.com/maps?q=%E5%88%88%E8%B0%B7%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&output=embed",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.6415974246097!2d137.00868947571945!3d34.99064106760074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60049cf18c69b3c7%3A0xe84bc97a36b348d5!2z5YiI6LC35biCIOeUo-alreaMr-iIiOOCu-ODs-OCv-ODvA!5e0!3m2!1sja!2sjp!4v1789262144330!5m2!1sja!2sjp",
     directionsUrl:
       "https://www.google.com/maps/search/?api=1&query=%E5%88%88%E8%B0%B7%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC",
+    center: { lat: 34.9914, lng: 137.0084 },
     accent: "#e9822c",
     stamp: "KARIYA",
   },
@@ -102,8 +108,11 @@ const venues = [
     dates: ["10/31(土) 13:30〜16:00"],
     mapUrl:
       "https://www.google.com/maps?q=%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AC&output=embed",
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.912842906398!2d137.0817342257182!3d34.95879311932105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600499a5be7f4873%3A0xa4a170428acb86f!2z44Ki44Oz44OV44Kp44O844Os!5e0!3m2!1sja!2sjp!4v1789262190949!5m2!1sja!2sjp",
     directionsUrl:
       "https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AC",
+    center: { lat: 34.9585, lng: 137.0808 },
     accent: "#2e73a9",
     stamp: "ANJO",
   },
@@ -164,12 +173,18 @@ function BrandWordmark({ footer = false }: { footer?: boolean }) {
   );
 }
 
-function DoodleField({ variant = "light" }: { variant?: "light" | "color" }) {
+function DoodleField({
+  variant = "light",
+  showFlower = true,
+}: {
+  variant?: "light" | "color";
+  showFlower?: boolean;
+}) {
   return (
     <div className={`doodle-field doodle-field--${variant}`} aria-hidden="true">
       <span className="doodle doodle--star-one">★</span>
       <span className="doodle doodle--star-two">✦</span>
-      <Flower2 className="doodle doodle--flower" />
+      {showFlower && <Flower2 className="doodle doodle--flower" />}
       <SunMedium className="doodle doodle--sun" />
       <span className="doodle doodle--squiggle">～～</span>
     </div>
@@ -224,20 +239,13 @@ export default function Home() {
 
       <main id="main-content">
         <section className="hero" id="top">
-          <DoodleField variant="color" />
+          <DoodleField variant="color" showFlower={false} />
           <div className="hero__paper" aria-hidden="true" />
           <div className="hero__content">
             <div className="hero__copy" data-reveal>
               <div className="hero__badges">
                 <span className="free-stamp">参加<br />無料</span>
                 <span className="hero__kicker">
-                  <span className="hero__presenter">
-                    <img
-                      className="hero__presenter-logo"
-                      src="/manus-storage/oyako-money-logo-v2_bac86f9b.png"
-                      alt="おみせやさんごっこ"
-                    />
-                  </span>
                   <span>親子で楽しむ<br />体験型マネースクール</span>
                 </span>
               </div>
@@ -358,8 +366,18 @@ export default function Home() {
                         <span key={date}>{date}</span>
                       ))}
                     </div>
+                  </div>
+                  <div className="venue-card__map" aria-label={`${venue.name}のGoogleマップ`}>
+                    <iframe
+                      className="venue-card__map-iframe"
+                      title={`${venue.name}のGoogleマップ`}
+                      src={venue.mapEmbedUrl}
+                      loading="lazy"
+                      allowFullScreen
+                      referrerPolicy="strict-origin-when-cross-origin"
+                    />
                     <a
-                      className="map-link"
+                      className="venue-card__map-link"
                       href={venue.directionsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -367,15 +385,6 @@ export default function Home() {
                       Googleマップで経路を見る
                       <ExternalLink size={16} aria-hidden="true" />
                     </a>
-                  </div>
-                  <div className="venue-card__map">
-                    <iframe
-                      src={venue.mapUrl}
-                      title={`${venue.name}のGoogleマップ`}
-                      loading="eager"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      allowFullScreen
-                    />
                   </div>
                 </article>
               ))}
@@ -553,8 +562,8 @@ export default function Home() {
               </div>
             </div>
             <div className="footer-contact">
-              <p className="footer-label"><Phone size={17} />お問い合わせ</p>
-              <p>参加に関するお問い合わせは、申込フォームよりご確認ください。</p>
+              <p className="footer-label"><Phone size={17} />お問い合わせ（平日 10:00〜16:00）</p>
+              <p><a href="tel:0523047480"><strong>052-304-7480</strong></a></p>
             </div>
           </div>
 

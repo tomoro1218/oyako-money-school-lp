@@ -2053,3 +2053,164 @@ a[href] {
     transform: none;
   }
 }
+
+/* Event revision: keep map cards functional without fragile embedded previews. */
+.venue-card__map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 180ms var(--ease-out), box-shadow 180ms var(--ease-out), background 180ms var(--ease-out);
+}
+
+.venue-card__map:hover {
+  background: color-mix(in srgb, var(--venue-accent) 25%, #fff5c8);
+  box-shadow: 7px 8px 0 color-mix(in srgb, var(--venue-accent) 28%, transparent);
+  transform: rotate(0.5deg) translateY(-2px);
+}
+
+.venue-card__map:focus-visible {
+  outline: 3px solid var(--cream);
+  box-shadow: 0 0 0 6px var(--pink), 7px 8px 0 color-mix(in srgb, var(--venue-accent) 28%, transparent);
+}
+
+.venue-card__map-placeholder {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  padding: 24px;
+  color: var(--venue-accent);
+  text-align: center;
+}
+
+.venue-card__map-placeholder strong {
+  color: var(--ink);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 900;
+}
+
+.venue-card__map-placeholder > span:not(:first-child) {
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .hero__title {
+    position: relative;
+    z-index: 4;
+  }
+
+  .hero__title-main > span:last-child {
+    position: relative;
+    z-index: 5;
+    margin-right: 0.16em;
+  }
+}
+
+/* Live Google Maps view inside the handmade venue frame. */
+.venue-card__map-view {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 354px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 11px 7px 14px 8px;
+  filter: saturate(0.82) sepia(0.06) contrast(0.98);
+}
+
+.venue-card__map-link {
+  position: absolute;
+  z-index: 5;
+  right: 13px;
+  bottom: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  color: var(--ink);
+  background: rgba(255, 253, 244, 0.94);
+  border: 2px solid var(--venue-accent);
+  border-radius: 999px;
+  box-shadow: 2px 3px 0 color-mix(in srgb, var(--venue-accent) 36%, transparent);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.venue-card__map-link:hover {
+  color: var(--venue-accent);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 560px) {
+  .venue-card__map-view {
+    min-height: 265px;
+  }
+
+  .venue-card__map-link {
+    right: 9px;
+    bottom: 9px;
+    padding: 6px 8px;
+    font-size: 0.66rem;
+  }
+}
+
+/* Restore the original embedded Google Maps presentation. */
+.venue-card__map {
+  display: block;
+  cursor: default;
+}
+
+.venue-card__map iframe {
+  display: block;
+  width: 100%;
+  min-height: 354px;
+  height: 100%;
+  border: 0;
+}
+
+.venue-card__map-link {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 9px;
+  color: var(--ink);
+  background: rgba(255, 253, 244, 0.94);
+  border: 2px solid var(--venue-accent);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+@media (max-width: 560px) {
+  .venue-card__map iframe {
+    min-height: 265px;
+  }
+}
+
+/* Static Google Maps preview captured from the live map view. */
+.venue-card__map-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 354px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 11px 7px 14px 8px;
+  filter: saturate(0.86) sepia(0.03) contrast(0.99);
+}
+
+@media (max-width: 560px) {
+  .venue-card__map-image {
+    min-height: 265px;
+  }
+}
