@@ -76,6 +76,7 @@ const venues = [
     name: "刈谷産業振興センター",
     address: "刈谷市相生町1丁目1-6",
     dates: ["10/10(土) 9:30〜12:00"],
+    availability: "残席わずか",
     mapUrl:
       "https://www.google.com/maps?q=%E5%88%88%E8%B0%B7%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&output=embed",
     mapEmbedUrl:
@@ -91,6 +92,7 @@ const venues = [
     name: "アンフォーレ",
     address: "安城市御幸本町504番地1",
     dates: ["10/31(土) 13:30〜16:00"],
+    availability: "残席わずか",
     mapUrl:
       "https://www.google.com/maps?q=%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AC&output=embed",
     mapEmbedUrl:
@@ -351,6 +353,11 @@ export default function Home() {
                         <span key={date}>{date}</span>
                       ))}
                     </div>
+                    {venue.availability && (
+                      <span className="venue-card__availability">
+                        {venue.availability}
+                      </span>
+                    )}
                   </div>
                   <div className="venue-card__map" aria-label={`${venue.name}のGoogleマップ`}>
                     <iframe

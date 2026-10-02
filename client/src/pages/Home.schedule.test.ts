@@ -17,6 +17,9 @@ describe("event schedule content", () => {
     expect(homeSource).toContain('address: "安城市御幸本町504番地1"');
     expect(homeSource).toContain('dates: ["10/31(土) 13:30〜16:00"]');
 
+    expect(homeSource.match(/availability: "残席わずか"/g)).toHaveLength(2);
+    expect(homeSource).toContain('className="venue-card__availability"');
+
     expect(homeSource).not.toMatch(/岡崎会場|竜美丘会館|岡崎市東明大寺町|OKAZAKI/);
     expect(homeSource).not.toMatch(/10\/3\(土\)/);
   });
