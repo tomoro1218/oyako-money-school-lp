@@ -44,7 +44,7 @@ const overviewItems = [
     icon: Clock3,
     label: "開催時間",
     value: "9:30〜12:00／13:30〜16:00",
-    note: "10/3・10/10は午前、10/31は午後開催",
+    note: "10/10は午前、10/31は午後開催",
     tone: "pink",
   },
   {
@@ -71,21 +71,6 @@ const overviewItems = [
 ];
 
 const venues = [
-  {
-    area: "岡崎会場",
-    name: "竜美丘会館",
-    address: "岡崎市東明大寺町5-1",
-    dates: ["10/3(土) 9:30〜12:00"],
-    mapUrl:
-      "https://www.google.com/maps?q=%E7%AB%9C%E7%BE%8E%E4%B8%98%E4%BC%9A%E9%A4%A8&output=embed",
-    mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.4311525415847!2d137.1746852757178!3d34.94580087002239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004bce3b6e382c9%3A0x798d53430ef67769!2z5oSb55-l55yM5bKh5bSO5biCIOernOe-juS4mOS8mumkqOmAmuOCig!5e0!3m2!1sja!2sjp!4v1789262069755!5m2!1sja!2sjp",
-    directionsUrl:
-      "https://www.google.com/maps/search/?api=1&query=%E7%AB%9C%E7%BE%8E%E4%B8%98%E4%BC%9A%E9%A4%A8",
-    center: { lat: 34.9542, lng: 137.1804 },
-    accent: "#d73572",
-    stamp: "OKAZAKI",
-  },
   {
     area: "刈谷会場",
     name: "刈谷産業振興センター",
