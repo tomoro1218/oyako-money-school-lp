@@ -31,4 +31,10 @@ describe("event schedule content", () => {
     );
     expect(homeSource).toContain("href={FORM_URL}");
   });
+
+  it("shows the current inquiry phone number with a callable tel link", () => {
+    expect(homeSource).toContain('href="tel:08036250463"');
+    expect(homeSource).toContain("080-3625-0463");
+    expect(homeSource).not.toContain("052-304-7480");
+  });
 });

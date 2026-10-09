@@ -555,7 +555,7 @@ export default function Home() {
             </div>
             <div className="footer-contact">
               <p className="footer-label"><Phone size={17} />お問い合わせ（平日 10:00〜16:00）</p>
-              <p><a href="tel:0523047480"><strong>052-304-7480</strong></a></p>
+              <p><a href="tel:08036250463"><strong>080-3625-0463</strong></a></p>
             </div>
           </div>
 
