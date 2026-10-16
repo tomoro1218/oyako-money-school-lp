@@ -43,14 +43,14 @@ const overviewItems = [
   {
     icon: Clock3,
     label: "開催時間",
-    value: "9:30〜12:00／13:30〜16:00",
-    note: "10/10は午前、10/31は午後開催",
+    value: "13:30〜16:00",
+    note: "10月31日（土）午後開催",
     tone: "pink",
   },
   {
     icon: UsersRound,
     label: "定員",
-    value: "各回 10組",
+    value: "定員10組",
     note: "少人数だから、のびのび楽しめます",
     tone: "orange",
   },
@@ -72,27 +72,10 @@ const overviewItems = [
 
 const venues = [
   {
-    area: "刈谷会場",
-    name: "刈谷産業振興センター",
-    address: "刈谷市相生町1丁目1-6",
-    dates: ["10/10(土) 9:30〜12:00"],
-    availability: "残席わずか",
-    mapUrl:
-      "https://www.google.com/maps?q=%E5%88%88%E8%B0%B7%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&output=embed",
-    mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.6415974246097!2d137.00868947571945!3d34.99064106760074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60049cf18c69b3c7%3A0xe84bc97a36b348d5!2z5YiI6LC35biCIOeUo-alreaMr-iIiOOCu-ODs-OCv-ODvA!5e0!3m2!1sja!2sjp!4v1789262144330!5m2!1sja!2sjp",
-    directionsUrl:
-      "https://www.google.com/maps/search/?api=1&query=%E5%88%88%E8%B0%B7%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC",
-    center: { lat: 34.9914, lng: 137.0084 },
-    accent: "#e9822c",
-    stamp: "KARIYA",
-  },
-  {
     area: "安城会場",
     name: "アンフォーレ",
     address: "安城市御幸本町504番地1",
-    dates: ["10/31(土) 13:30〜16:00"],
-    availability: "残席わずか",
+    dates: ["2026年10月31日（土） 13:30〜16:00"],
     mapUrl:
       "https://www.google.com/maps?q=%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AC&output=embed",
     mapEmbedUrl:
@@ -217,7 +200,7 @@ export default function Home() {
         </a>
         <nav className="desktop-nav" aria-label="ページ内メニュー">
           <a href="#about">開催概要</a>
-          <a href="#schedule">日程・会場</a>
+          <a href="#schedule">開催会場</a>
           <a href="#learning">学べること</a>
           <a href="#teacher">講師紹介</a>
         </nav>
@@ -249,6 +232,11 @@ export default function Home() {
                 </span>
                 <span className="hero__title-sub">ごっこ</span>
               </h1>
+              <div className="hero__event-details" aria-label="開催情報">
+                <span>10月31日（土）</span>
+                <span>13:30〜16:00</span>
+                <span>安城・アンフォーレ</span>
+              </div>
               <p className="hero__lead">
                 おかねの価値・大切さ・ありがとうを、
                 <br className="desktop-only" />
@@ -257,13 +245,13 @@ export default function Home() {
               <div className="hero__actions">
                 <CTA />
                 <a className="text-link" href="#schedule">
-                  日程と会場を見る
+                  開催会場を見る
                   <CalendarDays size={18} aria-hidden="true" />
                 </a>
               </div>
               <p className="hero__note">
                 <Check size={17} aria-hidden="true" />
-                3歳から参加OK・各回10組
+                3歳から参加OK・定員10組
               </p>
             </div>
 
@@ -323,11 +311,11 @@ export default function Home() {
           <DoodleField variant="light" />
           <div className="container">
             <SectionHeading
-              eyebrow="お近くの会場を選べます"
-              title="会場と日程"
-              copy="各会場の地図を確認して、ご希望の日程からお申し込みください。"
+              eyebrow="開催会場のご案内"
+              title="会場と開催日時"
+              copy="10月31日（土）開催。会場へのアクセスをご確認のうえ、お申し込みください。"
             />
-            <div className="venue-list">
+            <div className="venue-list venue-list--single">
               {venues.map((venue, index) => (
                 <article
                   className="venue-card"
@@ -353,11 +341,6 @@ export default function Home() {
                         <span key={date}>{date}</span>
                       ))}
                     </div>
-                    {venue.availability && (
-                      <span className="venue-card__availability">
-                        {venue.availability}
-                      </span>
-                    )}
                   </div>
                   <div className="venue-card__map" aria-label={`${venue.name}のGoogleマップ`}>
                     <iframe
@@ -383,8 +366,8 @@ export default function Home() {
             </div>
             <div className="schedule-cta" data-reveal>
               <div>
-                <p>各回10組の少人数開催です</p>
-                <h3>気になる日程を見つけたら、早めのお申込みがおすすめです。</h3>
+                <p>定員10組・参加無料</p>
+                <h3>10月31日（土）安城・アンフォーレでお待ちしています。</h3>
               </div>
               <CTA />
             </div>
@@ -535,9 +518,9 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="final-cta__eyebrow">参加無料・各回10組</p>
+              <p className="final-cta__eyebrow">参加無料・定員10組</p>
               <h2 id="final-cta-title">親子の「ありがとう」を育てる一日に。</h2>
-              <p>ご希望の会場と日程を、申込フォームからお選びください。</p>
+              <p>10月31日（土）13:30〜16:00、安城・アンフォーレで開催します。</p>
             </div>
             <CTA />
           </div>
