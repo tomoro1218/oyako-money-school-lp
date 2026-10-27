@@ -34,9 +34,19 @@ describe("single Anjo event content", () => {
   });
 
   it("uses single-event wording without unverified availability", () => {
-    expect(homeSource).not.toMatch(/残席わずか|満席間近|availability/);
+    expect(homeSource).not.toMatch(/残席わずか|満席間近|availability:\s*"/);
     expect(homeSource).not.toMatch(/各会場|ご希望の日程|各回10組|各回 10組/);
     expect(homeSource).toContain("定員10組・参加無料");
+  });
+
+  it("shows the fixed remaining-slot message in the hero and final application area", () => {
+    expect(homeSource).toContain(
+      'const AVAILABILITY_MESSAGE = "開催間近！ 残り3枠限定"',
+    );
+    expect(homeSource).toContain('className="hero__availability"');
+    expect(homeSource).toContain('className="final-cta__availability"');
+    expect(homeSource.match(/AVAILABILITY_MESSAGE/g)).toHaveLength(3);
+    expect(homeSource).not.toMatch(/残り3名|本日締切|申込急増/);
   });
 
   it("keeps the one Anjo map and current public application form", () => {

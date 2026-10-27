@@ -588,6 +588,22 @@ a[href] {
   transform: rotate(-2deg);
 }
 
+.hero__availability {
+  display: inline-block;
+  margin: 13px 0 -8px;
+  padding: 8px 15px;
+  color: #fff;
+  background: var(--pink);
+  border: 2px solid #fff;
+  border-radius: 13px 9px 14px 10px;
+  box-shadow: 3px 4px 0 var(--pink-dark);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  transform: rotate(-1deg);
+}
+
 .hero__event-details {
   display: flex;
   flex-wrap: wrap;
@@ -1541,6 +1557,22 @@ a[href] {
   font-weight: 600;
 }
 
+.final-cta__availability {
+  display: inline-block;
+  margin: 0 0 11px;
+  padding: 7px 12px;
+  color: var(--pink-dark);
+  background: #fff3a9;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  box-shadow: 2px 3px 0 rgba(169, 30, 82, 0.28);
+  font-size: clamp(0.92rem, 1.4vw, 1.08rem);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.035em;
+  transform: rotate(-1deg);
+}
+
 .final-cta h2 {
   margin: 0;
   font-size: clamp(1.8rem, 4vw, 3.35rem);
@@ -2033,6 +2065,7 @@ a[href] {
   .hero__presenter-text { font-size: 0.68rem; }
   .hero__title-main > span { font-size: clamp(2.72rem, 16.8vw, 5.7rem); }
   .hero__title-sub { margin-top: 10px; font-size: 2.6rem; }
+  .hero__availability { margin-top: 11px; padding: 8px 12px; font-size: 1.08rem; }
   .hero__lead { margin: 22px 0 27px; font-size: 0.98rem; }
   .desktop-only { display: none; }
   .hero__actions { align-items: stretch; flex-direction: column; }

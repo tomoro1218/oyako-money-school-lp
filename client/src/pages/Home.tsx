@@ -29,6 +29,7 @@ import {
 
 const FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSc005BG2ueuMSLm3ApIpcAjm7YOsUmDLcprwnMf9VL8nrcyXA/viewform?usp=dialog";
+const AVAILABILITY_MESSAGE = "開催間近！ 残り3枠限定";
 
 const heroTitle = [
   { char: "お", color: "#d73572", rotate: "-4deg" },
@@ -232,6 +233,7 @@ export default function Home() {
                 </span>
                 <span className="hero__title-sub">ごっこ</span>
               </h1>
+              <p className="hero__availability">{AVAILABILITY_MESSAGE}</p>
               <div className="hero__event-details" aria-label="開催情報">
                 <span>10月31日（土）</span>
                 <span>13:30〜16:00</span>
@@ -519,6 +521,7 @@ export default function Home() {
             </div>
             <div>
               <p className="final-cta__eyebrow">参加無料・定員10組</p>
+              <p className="final-cta__availability">{AVAILABILITY_MESSAGE}</p>
               <h2 id="final-cta-title">親子の「ありがとう」を育てる一日に。</h2>
               <p>10月31日（土）13:30〜16:00、安城・アンフォーレで開催します。</p>
             </div>
