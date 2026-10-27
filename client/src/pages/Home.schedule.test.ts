@@ -23,7 +23,7 @@ describe("single Anjo event content", () => {
     expect(homeSource).toContain('name: "アンフォーレ"');
     expect(homeSource).toContain('address: "安城市御幸本町504番地1"');
     expect(homeSource).toContain('dates: ["2026年10月31日（土） 13:30〜16:00"]');
-    expect(homeSource).toContain('className="hero__event-details"');
+    expect(homeSource).not.toContain('className="hero__event-details"');
     expect(homeSource).toContain("10月31日（土）");
     expect(homeSource).toContain("安城・アンフォーレ");
 

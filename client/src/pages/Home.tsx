@@ -234,11 +234,6 @@ export default function Home() {
                 <span className="hero__title-sub">ごっこ</span>
               </h1>
               <p className="hero__availability">{AVAILABILITY_MESSAGE}</p>
-              <div className="hero__event-details" aria-label="開催情報">
-                <span>10月31日（土）</span>
-                <span>13:30〜16:00</span>
-                <span>安城・アンフォーレ</span>
-              </div>
               <p className="hero__lead">
                 おかねの価値・大切さ・ありがとうを、
                 <br className="desktop-only" />
