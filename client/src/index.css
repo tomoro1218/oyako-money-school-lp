@@ -588,20 +588,42 @@ a[href] {
   transform: rotate(-2deg);
 }
 
-.hero__availability {
+.hero__schedule-summary {
   display: inline-block;
-  margin: 13px 0 -8px;
-  padding: 8px 15px;
-  color: #fff;
-  background: var(--pink);
-  border: 2px solid #fff;
+  margin: 16px 0 -4px;
+  padding: 10px 14px 11px;
+  color: var(--pink-dark);
+  background: #fff4b9;
+  border: 2px dashed var(--pink);
   border-radius: 13px 9px 14px 10px;
-  box-shadow: 3px 4px 0 var(--pink-dark);
+  box-shadow: 3px 4px 0 rgba(169, 30, 82, 0.16);
+  transform: rotate(-1deg);
+}
+
+.hero__schedule-summary strong {
+  display: block;
   font-size: clamp(1.05rem, 1.8vw, 1.3rem);
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.25;
   letter-spacing: 0.04em;
-  transform: rotate(-1deg);
+}
+
+.hero__schedule-summary > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.hero__schedule-summary span {
+  padding: 3px 7px;
+  color: var(--ink);
+  background: rgba(255, 253, 244, 0.9);
+  border: 1px solid rgba(215, 53, 114, 0.35);
+  border-radius: 999px;
+  font-size: clamp(0.78rem, 1.1vw, 0.92rem);
+  font-weight: 900;
+  line-height: 1.25;
 }
 
 .hero__lead {
@@ -2306,20 +2328,43 @@ a[href] {
   .venue-card__map iframe { min-height: 265px; }
 }
 
-/* Single Anjo event: center the sole venue card without leaving a second-card gap. */
-.venue-list--single {
-  grid-template-columns: minmax(0, 820px);
-  justify-content: center;
-  max-width: 820px;
+/* Three new event dates: balanced cards on desktop, stacked on mobile. */
+.venue-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1180px;
+  margin-inline: auto;
+  gap: clamp(18px, 2.2vw, 30px);
 }
 
-.venue-list--single .venue-card {
-  transform: rotate(-0.2deg);
+.venue-card:nth-child(1) { transform: rotate(-0.35deg); }
+.venue-card:nth-child(2) { transform: rotate(0.35deg); }
+.venue-card:nth-child(3) { transform: rotate(-0.25deg); }
+.venue-card:nth-child(1),
+.venue-card:nth-child(2),
+.venue-card:nth-child(3) { margin-inline: 0; }
+
+.venue-card__info {
+  min-height: 270px;
+  padding: clamp(25px, 2.6vw, 38px);
 }
 
-@media (max-width: 840px) {
-  .venue-list--single {
-    grid-template-columns: minmax(0, 1fr);
-    max-width: 720px;
+.venue-card__stamp {
+  font-size: clamp(0.48rem, 0.62vw, 0.57rem);
+}
+
+@media (max-width: 1080px) {
+  .venue-list { grid-template-columns: 1fr; }
+  .venue-card:nth-child(1),
+  .venue-card:nth-child(2),
+  .venue-card:nth-child(3) {
+    grid-column: auto;
+    width: auto;
+    justify-self: stretch;
   }
+}
+
+@media (max-width: 560px) {
+  .hero__schedule-summary { display: block; margin-right: 8px; }
+  .hero__schedule-summary > div { gap: 5px; }
+  .hero__schedule-summary span { font-size: 0.78rem; }
 }

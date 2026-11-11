@@ -29,7 +29,11 @@ import {
 
 const FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSc005BG2ueuMSLm3ApIpcAjm7YOsUmDLcprwnMf9VL8nrcyXA/viewform?usp=dialog";
-const AVAILABILITY_MESSAGE = "開催間近！ 残り3枠限定";
+const HERO_SCHEDULE = [
+  "11/28 岡崎",
+  "11/29 刈谷",
+  "12/12 岡崎",
+];
 
 const heroTitle = [
   { char: "お", color: "#d73572", rotate: "-4deg" },
@@ -43,9 +47,9 @@ const heroTitle = [
 const overviewItems = [
   {
     icon: Clock3,
-    label: "開催時間",
-    value: "13:30〜16:00",
-    note: "10月31日（土）午後開催",
+    label: "開催日程",
+    value: "11/28・11/29・12/12",
+    note: "午前2回・午後1回開催",
     tone: "pink",
   },
   {
@@ -73,19 +77,46 @@ const overviewItems = [
 
 const venues = [
   {
-    area: "安城会場",
-    name: "アンフォーレ",
-    address: "安城市御幸本町504番地1",
-    dates: ["2026年10月31日（土） 13:30〜16:00"],
+    area: "岡崎会場",
+    name: "岡崎市民会館",
+    address: "岡崎市六供町字出崎15番地1",
+    dates: ["2026年11月28日（土） 9:30〜12:00"],
     mapUrl:
-      "https://www.google.com/maps?q=%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AC&output=embed",
+      "https://www.google.com/maps?q=%E5%B2%A1%E5%B4%8E%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8&output=embed",
     mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.912842906398!2d137.0817342257182!3d34.95879311932105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600499a5be7f4873%3A0xa4a170428acb86f!2z44Ki44Oz44OV44Kp44O844Os!5e0!3m2!1sja!2sjp!4v1789262190949!5m2!1sja!2sjp",
+      "https://www.google.com/maps?q=%E5%B2%A1%E5%B4%8E%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8&output=embed",
     directionsUrl:
-      "https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AC",
-    center: { lat: 34.9585, lng: 137.0808 },
+      "https://www.google.com/maps/search/?api=1&query=%E5%B2%A1%E5%B4%8E%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8",
     accent: "#2e73a9",
-    stamp: "ANJO",
+    stamp: "OKAZAKI",
+  },
+  {
+    area: "刈谷会場",
+    name: "刈谷産業振興センター",
+    address: "刈谷市相生町1丁目1番地6",
+    dates: ["2026年11月29日（日） 9:30〜12:00"],
+    mapUrl:
+      "https://www.google.com/maps?q=%E5%88%88%E8%B0%B7%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&output=embed",
+    mapEmbedUrl:
+      "https://www.google.com/maps?q=%E5%88%88%E8%B0%B7%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&output=embed",
+    directionsUrl:
+      "https://www.google.com/maps/search/?api=1&query=%E5%88%88%E8%B0%B7%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC",
+    accent: "#f28c28",
+    stamp: "KARIYA",
+  },
+  {
+    area: "岡崎会場",
+    name: "竜美丘会館",
+    address: "岡崎市東明大寺町5番地1",
+    dates: ["2026年12月12日（土） 13:30〜16:00"],
+    mapUrl:
+      "https://www.google.com/maps?q=%E7%AB%9C%E7%BE%8E%E4%B8%98%E4%BC%9A%E9%A4%A8&output=embed",
+    mapEmbedUrl:
+      "https://www.google.com/maps?q=%E7%AB%9C%E7%BE%8E%E4%B8%98%E4%BC%9A%E9%A4%A8&output=embed",
+    directionsUrl:
+      "https://www.google.com/maps/search/?api=1&query=%E7%AB%9C%E7%BE%8E%E4%B8%98%E4%BC%9A%E9%A4%A8",
+    accent: "#5c8b55",
+    stamp: "OKAZAKI",
   },
 ];
 
@@ -233,7 +264,14 @@ export default function Home() {
                 </span>
                 <span className="hero__title-sub">ごっこ</span>
               </h1>
-              <p className="hero__availability">{AVAILABILITY_MESSAGE}</p>
+              <div className="hero__schedule-summary" aria-label="開催日程">
+                <strong>11・12月 岡崎・刈谷開催</strong>
+                <div>
+                  {HERO_SCHEDULE.map((schedule) => (
+                    <span key={schedule}>{schedule}</span>
+                  ))}
+                </div>
+              </div>
               <p className="hero__lead">
                 おかねの価値・大切さ・ありがとうを、
                 <br className="desktop-only" />
@@ -310,9 +348,9 @@ export default function Home() {
             <SectionHeading
               eyebrow="開催会場のご案内"
               title="会場と開催日時"
-              copy="10月31日（土）開催。会場へのアクセスをご確認のうえ、お申し込みください。"
+              copy="11月・12月の3日程を開催します。会場へのアクセスをご確認のうえ、お申し込みください。"
             />
-            <div className="venue-list venue-list--single">
+            <div className="venue-list">
               {venues.map((venue, index) => (
                 <article
                   className="venue-card"
@@ -363,8 +401,8 @@ export default function Home() {
             </div>
             <div className="schedule-cta" data-reveal>
               <div>
-                <p>定員10組・参加無料</p>
-                <h3>10月31日（土）安城・アンフォーレでお待ちしています。</h3>
+                <p>参加無料・開催日程を選んでお申し込みください</p>
+                <h3>岡崎・刈谷の3会場でお待ちしています。</h3>
               </div>
               <CTA />
             </div>
@@ -515,10 +553,9 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="final-cta__eyebrow">参加無料・定員10組</p>
-              <p className="final-cta__availability">{AVAILABILITY_MESSAGE}</p>
+              <p className="final-cta__eyebrow">参加無料・11月／12月開催</p>
               <h2 id="final-cta-title">親子の「ありがとう」を育てる一日に。</h2>
-              <p>10月31日（土）13:30〜16:00、安城・アンフォーレで開催します。</p>
+              <p>11月28日・11月29日・12月12日の3日程で開催します。会場と時間をご確認のうえ、お申し込みください。</p>
             </div>
             <CTA />
           </div>
