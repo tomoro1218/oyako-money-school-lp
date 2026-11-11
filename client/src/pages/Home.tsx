@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 
 const FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSc005BG2ueuMSLm3ApIpcAjm7YOsUmDLcprwnMf9VL8nrcyXA/viewform?usp=dialog";
+  "https://docs.google.com/forms/d/e/1FAIpQLSdK2yiiqNHZUaM9D0Zvh-jSSPCK4kLv9zjF4GH_2VGxj_PiOw/viewform?usp=header";
 const HERO_SCHEDULE = [
   "11/28 岡崎",
   "11/29 刈谷",

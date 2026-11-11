@@ -16,7 +16,7 @@ const styleSource = readFileSync(
 );
 
 const publicFormUrl =
-  "https://docs.google.com/forms/d/e/1FAIpQLSc005BG2ueuMSLm3ApIpcAjm7YOsUmDLcprwnMf9VL8nrcyXA/viewform?usp=dialog";
+  "https://docs.google.com/forms/d/e/1FAIpQLSdK2yiiqNHZUaM9D0Zvh-jSSPCK4kLv9zjF4GH_2VGxj_PiOw/viewform?usp=header";
 
 describe("November–December 2026 event content", () => {
   it("lists exactly the three requested dates and venues in chronological order", () => {
