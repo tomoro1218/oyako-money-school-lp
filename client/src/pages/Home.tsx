@@ -30,7 +30,6 @@ import {
 const FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSdK2yiiqNHZUaM9D0Zvh-jSSPCK4kLv9zjF4GH_2VGxj_PiOw/viewform?usp=header";
 const HERO_SCHEDULE = [
-  "11/28 岡崎",
   "11/29 刈谷",
   "12/12 岡崎",
 ];
@@ -48,8 +47,8 @@ const overviewItems = [
   {
     icon: Clock3,
     label: "開催日程",
-    value: "11/28・11/29・12/12",
-    note: "午前2回・午後1回開催",
+    value: "11/29・12/12",
+    note: "午前1回・午後1回開催",
     tone: "pink",
   },
   {
@@ -76,20 +75,6 @@ const overviewItems = [
 ];
 
 const venues = [
-  {
-    area: "岡崎会場",
-    name: "岡崎市民会館",
-    address: "岡崎市六供町字出崎15番地1",
-    dates: ["2026年11月28日（土） 9:30〜12:00"],
-    mapUrl:
-      "https://www.google.com/maps?q=%E5%B2%A1%E5%B4%8E%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8&output=embed",
-    mapEmbedUrl:
-      "https://www.google.com/maps?q=%E5%B2%A1%E5%B4%8E%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8&output=embed",
-    directionsUrl:
-      "https://www.google.com/maps/search/?api=1&query=%E5%B2%A1%E5%B4%8E%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8",
-    accent: "#2e73a9",
-    stamp: "OKAZAKI",
-  },
   {
     area: "刈谷会場",
     name: "刈谷産業振興センター",
@@ -272,6 +257,10 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+              <p className="hero__urgent">
+                <strong>今週日曜開催！</strong>
+                <span>11/29（日）刈谷産業振興センター</span>
+              </p>
               <p className="hero__lead">
                 おかねの価値・大切さ・ありがとうを、
                 <br className="desktop-only" />
@@ -348,7 +337,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="開催会場のご案内"
               title="会場と開催日時"
-              copy="11月・12月の3日程を開催します。会場へのアクセスをご確認のうえ、お申し込みください。"
+              copy="11月29日と12月12日の2日程を開催します。会場へのアクセスをご確認のうえ、お申し込みください。"
             />
             <div className="venue-list">
               {venues.map((venue, index) => (
@@ -402,7 +391,7 @@ export default function Home() {
             <div className="schedule-cta" data-reveal>
               <div>
                 <p>参加無料・開催日程を選んでお申し込みください</p>
-                <h3>岡崎・刈谷の3会場でお待ちしています。</h3>
+                <h3>刈谷・岡崎の2会場でお待ちしています。</h3>
               </div>
               <CTA />
             </div>
@@ -441,7 +430,7 @@ export default function Home() {
               <div className="story-copy" data-reveal>
                 <p className="story-copy__number">01</p>
                 <p className="story-copy__eyebrow">遊びが学びに変わる</p>
-                <h3>つくる・売る・買うを、まるごと体験</h3>
+                <h3>つくる・売る・お金をもらうを、まるごと体験</h3>
                 <p>
                   「おみせやさんごっこ」の準備から接客まで、子どもたちが主役になって挑戦します。難しい言葉ではなく、手を動かして、人とやり取りするからこそ、お金の役割が自然に心へ残ります。
                 </p>
@@ -456,7 +445,7 @@ export default function Home() {
               <div className="story-image story-image--cycle" data-reveal>
                 <img
                   src="/manus-storage/oyako-money-cycle-v2_afae8f65.png"
-                  alt="作る人、売る人、買う人、ありがとうのつながりを描いたイラスト"
+                  alt="作る人、売る人、お金をもらう人、ありがとうのつながりを描いたイラスト"
                 />
                 <span className="image-tape image-tape--blue" aria-hidden="true" />
               </div>
@@ -478,20 +467,20 @@ export default function Home() {
             <div className="parent-seminar" data-reveal>
               <div className="parent-seminar__copy">
                 <span className="parent-seminar__tag">保護者さまへ</span>
-                <h3>お子さまの体験中は、別室でマネーセミナー</h3>
+                <h3>お子さまのおこづかいや、成長に合わせたお金との向き合い方について、気軽に学べる時間</h3>
                 <p>
-                  子どもたちが「おみせやさん」の準備をしている間、保護者さまは別室でお金について学べます。親子それぞれの目線から学んだあと、家庭での会話へつなげていきましょう。
+                  子どもたちが「おみせやさん」の準備をしている間、保護者さまは別室で、お子さまのおこづかいや成長に合わせたお金との向き合い方について気軽に学べます。親子それぞれの目線から学んだあと、家庭での会話へつなげていきましょう。
                 </p>
                 <ul>
-                  <li><BookOpenCheck size={19} />家庭で始める金融教育のヒント</li>
-                  <li><ShieldCheck size={19} />身近なお金をやさしく整理</li>
+                  <li><BookOpenCheck size={19} />おこづかいを考えるヒント</li>
+                  <li><ShieldCheck size={19} />成長に合わせたお金との向き合い方</li>
                   <li><UsersRound size={19} />親子で話すきっかけづくり</li>
                 </ul>
               </div>
               <div className="parent-seminar__image">
                 <img
                   src="/manus-storage/oyako-money-seminar-v2_03ea309b.png"
-                  alt="保護者が別室でマネーセミナーを受ける様子の手描きイラスト"
+                  alt="保護者がお金との向き合い方を学ぶ様子の手描きイラスト"
                 />
               </div>
             </div>
@@ -555,7 +544,7 @@ export default function Home() {
             <div>
               <p className="final-cta__eyebrow">参加無料・11月／12月開催</p>
               <h2 id="final-cta-title">親子の「ありがとう」を育てる一日に。</h2>
-              <p>11月28日・11月29日・12月12日の3日程で開催します。会場と時間をご確認のうえ、お申し込みください。</p>
+              <p>11月29日・12月12日の2日程で開催します。会場と時間をご確認のうえ、お申し込みください。</p>
             </div>
             <CTA />
           </div>
