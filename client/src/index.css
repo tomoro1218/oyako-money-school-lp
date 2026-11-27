@@ -602,7 +602,7 @@ a[href] {
 
 .hero__schedule-summary strong {
   display: block;
-  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  font-size: clamp(1.18rem, 2.2vw, 1.55rem);
   font-weight: 900;
   line-height: 1.25;
   letter-spacing: 0.04em;
@@ -626,7 +626,7 @@ a[href] {
   line-height: 1.25;
 }
 
-.hero__urgent {
+.hero__venue-highlight {
   display: grid;
   gap: 2px;
   width: fit-content;
@@ -641,14 +641,14 @@ a[href] {
   transform: rotate(1deg);
 }
 
-.hero__urgent strong {
-  font-size: clamp(1.12rem, 2vw, 1.45rem);
+.hero__venue-highlight strong {
+  font-size: clamp(1.25rem, 2.4vw, 1.7rem);
   font-weight: 900;
   line-height: 1.2;
 }
 
-.hero__urgent span {
-  font-size: clamp(0.78rem, 1.2vw, 0.95rem);
+.hero__venue-highlight span {
+  font-size: clamp(0.92rem, 1.35vw, 1.08rem);
   font-weight: 800;
   line-height: 1.35;
 }
@@ -2393,7 +2393,8 @@ a[href] {
 @media (max-width: 560px) {
   .hero__schedule-summary { display: block; margin-right: 8px; }
   .hero__schedule-summary > div { gap: 5px; }
-  .hero__schedule-summary span { font-size: 0.78rem; }
-  .hero__urgent { width: 100%; margin-top: 13px; padding-inline: 12px; }
-  .hero__urgent strong { font-size: 1.14rem; }
+  .hero__schedule-summary span { font-size: 0.86rem; }
+  .hero__venue-highlight { width: 100%; margin-top: 13px; padding-inline: 12px; }
+  .hero__venue-highlight strong { font-size: 1.25rem; }
+  .hero__venue-highlight span { font-size: 0.95rem; }
 }

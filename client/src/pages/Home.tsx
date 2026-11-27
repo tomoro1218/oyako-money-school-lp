@@ -29,10 +29,7 @@ import {
 
 const FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSdK2yiiqNHZUaM9D0Zvh-jSSPCK4kLv9zjF4GH_2VGxj_PiOw/viewform?usp=header";
-const HERO_SCHEDULE = [
-  "11/29 刈谷",
-  "12/12 岡崎",
-];
+const HERO_SCHEDULE = ["12/12 岡崎"];
 
 const heroTitle = [
   { char: "お", color: "#d73572", rotate: "-4deg" },
@@ -47,8 +44,8 @@ const overviewItems = [
   {
     icon: Clock3,
     label: "開催日程",
-    value: "11/29・12/12",
-    note: "午前1回・午後1回開催",
+    value: "12/12",
+    note: "13:30〜16:00開催",
     tone: "pink",
   },
   {
@@ -75,20 +72,6 @@ const overviewItems = [
 ];
 
 const venues = [
-  {
-    area: "刈谷会場",
-    name: "刈谷産業振興センター",
-    address: "刈谷市相生町1丁目1番地6",
-    dates: ["2026年11月29日（日） 9:30〜12:00"],
-    mapUrl:
-      "https://www.google.com/maps?q=%E5%88%88%E8%B0%B7%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&output=embed",
-    mapEmbedUrl:
-      "https://www.google.com/maps?q=%E5%88%88%E8%B0%B7%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&output=embed",
-    directionsUrl:
-      "https://www.google.com/maps/search/?api=1&query=%E5%88%88%E8%B0%B7%E7%94%A3%E6%A5%AD%E6%8C%AF%E8%88%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC",
-    accent: "#f28c28",
-    stamp: "KARIYA",
-  },
   {
     area: "岡崎会場",
     name: "竜美丘会館",
@@ -250,16 +233,16 @@ export default function Home() {
                 <span className="hero__title-sub">ごっこ</span>
               </h1>
               <div className="hero__schedule-summary" aria-label="開催日程">
-                <strong>11・12月 岡崎・刈谷開催</strong>
+                <strong>12月12日 岡崎開催</strong>
                 <div>
                   {HERO_SCHEDULE.map((schedule) => (
                     <span key={schedule}>{schedule}</span>
                   ))}
                 </div>
               </div>
-              <p className="hero__urgent">
-                <strong>今週日曜開催！</strong>
-                <span>11/29（日）刈谷産業振興センター</span>
+              <p className="hero__venue-highlight">
+                <strong>12月12日（土）</strong>
+                <span>13:30〜16:00｜竜美丘会館</span>
               </p>
               <p className="hero__lead">
                 おかねの価値・大切さ・ありがとうを、
@@ -337,7 +320,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="開催会場のご案内"
               title="会場と開催日時"
-              copy="11月29日と12月12日の2日程を開催します。会場へのアクセスをご確認のうえ、お申し込みください。"
+              copy="12月12日（土）に開催します。会場へのアクセスをご確認のうえ、お申し込みください。"
             />
             <div className="venue-list">
               {venues.map((venue, index) => (
@@ -390,8 +373,8 @@ export default function Home() {
             </div>
             <div className="schedule-cta" data-reveal>
               <div>
-                <p>参加無料・開催日程を選んでお申し込みください</p>
-                <h3>刈谷・岡崎の2会場でお待ちしています。</h3>
+                <p>参加無料・開催日時をご確認のうえお申し込みください</p>
+                <h3>竜美丘会館でお待ちしています。</h3>
               </div>
               <CTA />
             </div>
@@ -542,9 +525,9 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="final-cta__eyebrow">参加無料・11月／12月開催</p>
+              <p className="final-cta__eyebrow">参加無料・12月開催</p>
               <h2 id="final-cta-title">親子の「ありがとう」を育てる一日に。</h2>
-              <p>11月29日・12月12日の2日程で開催します。会場と時間をご確認のうえ、お申し込みください。</p>
+              <p>12月12日（土）13:30〜16:00に開催します。会場と時間をご確認のうえ、お申し込みください。</p>
             </div>
             <CTA />
           </div>
