@@ -29,8 +29,6 @@ import {
 
 const FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSdK2yiiqNHZUaM9D0Zvh-jSSPCK4kLv9zjF4GH_2VGxj_PiOw/viewform?usp=header";
-const HERO_SCHEDULE = ["12/12 岡崎"];
-
 const heroTitle = [
   { char: "お", color: "#d73572", rotate: "-4deg" },
   { char: "み", color: "#2e73a9", rotate: "3deg" },
@@ -232,14 +230,6 @@ export default function Home() {
                 </span>
                 <span className="hero__title-sub">ごっこ</span>
               </h1>
-              <div className="hero__schedule-summary" aria-label="開催日程">
-                <strong>12月12日 岡崎開催</strong>
-                <div>
-                  {HERO_SCHEDULE.map((schedule) => (
-                    <span key={schedule}>{schedule}</span>
-                  ))}
-                </div>
-              </div>
               <p className="hero__venue-highlight">
                 <strong>12月12日（土）</strong>
                 <span>13:30〜16:00｜竜美丘会館</span>

@@ -20,7 +20,6 @@ const publicFormUrl =
 
 describe("December 2026 event content", () => {
   it("lists only the requested December 12 venue and date", () => {
-    expect(homeSource).toContain('const HERO_SCHEDULE = ["12/12 岡崎"];');
     expect(homeSource).not.toContain("11/29");
     expect(homeSource).not.toContain("11月29");
     expect(homeSource).not.toContain("刈谷");
@@ -34,6 +33,8 @@ describe("December 2026 event content", () => {
   it("shows the December date and venue in the hero without the past-event alert", () => {
     expect(homeSource).toContain("12月12日（土）");
     expect(homeSource).toContain("13:30〜16:00｜竜美丘会館");
+    expect(homeSource).not.toContain("12月12日 岡崎開催");
+    expect(homeSource).not.toContain("hero__schedule-summary");
     expect(homeSource).not.toContain("今週日曜開催！");
     expect(homeSource).not.toContain("hero__urgent");
     expect(homeSource).toContain("hero__venue-highlight");
