@@ -18,12 +18,14 @@ import {
   HandCoins,
   HeartHandshake,
   MapPin,
+  MessageCircle,
   Phone,
   School,
   ShieldCheck,
   Sparkles,
   Store,
   SunMedium,
+  UserRound,
   UsersRound,
 } from "lucide-react";
 
@@ -457,6 +459,69 @@ export default function Home() {
                 />
               </div>
             </div>
+
+            <section className="experience-proof" aria-labelledby="experience-proof-title">
+              <SectionHeading
+                eyebrow="参加後のイメージ"
+                title="実際のおみせやさんごっこの様子"
+                copy="過去の開催時の様子です。お子さまたちがお店屋さんになり、お客様とのやり取りを楽しみました。"
+              />
+              <div className="experience-gallery">
+                <figure className="experience-gallery__item" data-reveal>
+                  <img
+                    src="/manus-storage/IMG_5671_7f78d556.jpeg"
+                    alt="おみせやさんごっこで子どもがお客様に商品を渡している様子"
+                    loading="lazy"
+                  />
+                  <figcaption>お客様とのやり取りを楽しむ子どもたち</figcaption>
+                </figure>
+                <figure className="experience-gallery__item" data-reveal>
+                  <img
+                    src="/manus-storage/IMG_5672_56143da6.jpeg"
+                    alt="おみせやさんごっこで子どもがお客様にお金を渡している様子"
+                    loading="lazy"
+                  />
+                  <figcaption>「ありがとう」を交わす、わくわくする体験</figcaption>
+                </figure>
+              </div>
+
+              <div className="testimonials" aria-label="ご参加いただいた保護者様の声">
+                <SectionHeading
+                  eyebrow="参加者さまの声"
+                  title="ご参加いただいた保護者様の声"
+                  copy="過去の参加者様からいただいたアンケートです。お名前は匿名のため仮名で掲載しております。"
+                />
+                <div className="testimonial-grid">
+                  <article className="testimonial-card" data-reveal>
+                    <div className="testimonial-card__header">
+                      <span className="testimonial-card__avatar" aria-hidden="true"><UserRound size={24} /></span>
+                      <strong>T様（保護者）</strong>
+                    </div>
+                    <MessageCircle className="testimonial-card__quote-icon" aria-hidden="true" />
+                    <div className="testimonial-card__body">
+                      <p>お金が「ありがとう」の交換ということがとても印象的でした。</p>
+                      <p>おこづかいについてどうしようか考えていたので、今回のお話と子どものこの経験をきっかけにはじめてみようと思います。</p>
+                      <p>子どものたのしそうな姿が見れてよかったです。ありがとうございました。</p>
+                    </div>
+                  </article>
+                  <article className="testimonial-card" data-reveal>
+                    <div className="testimonial-card__header">
+                      <span className="testimonial-card__avatar" aria-hidden="true"><UserRound size={24} /></span>
+                      <strong>H様（保護者）</strong>
+                    </div>
+                    <MessageCircle className="testimonial-card__quote-icon" aria-hidden="true" />
+                    <div className="testimonial-card__body">
+                      <p>子供のおこづかいの事や、お金にあまり興味がない子供にどうアプローチするべきか悩んでいたので、よい機会になりました。</p>
+                      <p>目的のために資産を形成する、という所にとても共感しました。</p>
+                    </div>
+                  </article>
+                </div>
+                <div className="testimonials-cta" data-reveal>
+                  <p>親子で楽しく、お金について考えるきっかけを。</p>
+                  <CTA />
+                </div>
+              </div>
+            </section>
 
             <div className="learning-cta" data-reveal>
               <Flower2 aria-hidden="true" />

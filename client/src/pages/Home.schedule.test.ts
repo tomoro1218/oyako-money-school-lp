@@ -63,4 +63,19 @@ describe("December 2026 event content", () => {
     expect(styleSource).toContain("grid-template-columns: repeat(2, minmax(0, 1fr));");
     expect(styleSource).toContain("grid-template-columns: 1fr;");
   });
+
+  it("includes the requested event gallery and parent testimonials before the learning CTA", () => {
+    expect(homeSource).toContain("実際のおみせやさんごっこの様子");
+    expect(homeSource).toContain("/manus-storage/IMG_5671_7f78d556.jpeg");
+    expect(homeSource).toContain("/manus-storage/IMG_5672_56143da6.jpeg");
+    expect(homeSource).toContain("T様（保護者）");
+    expect(homeSource).toContain("H様（保護者）");
+    expect(homeSource).toContain("お金が「ありがとう」の交換ということがとても印象的でした。");
+    expect(homeSource).toContain("目的のために資産を形成する、という所にとても共感しました。");
+    expect(styleSource).toContain(".experience-gallery");
+    expect(styleSource).toContain(".testimonial-grid");
+    expect(homeSource.indexOf("実際のおみせやさんごっこの様子")).toBeLessThan(
+      homeSource.indexOf("className=\"learning-cta\""),
+    );
+  });
 });
